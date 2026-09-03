@@ -1,0 +1,165 @@
+.details-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-snap-align: start;
+}
+
+.details-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.ceremony-title {
+  font-size: 2.2rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.location {
+  font-size: 1.4rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.time-section {
+  margin-top: 30px;
+}
+
+.time-label {
+  font-size: 0.95rem;
+  color: var(--sage);
+  font-family: 'Georgia', 'Garamond', serif;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+}
+
+.time {
+  font-size: 3.5rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1;
+}
+
+.date-section {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.day {
+  font-size: 1.1rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.date-number {
+  font-size: 3rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1;
+  padding: 0 15px;
+  border-left: 2px solid var(--sage);
+  border-right: 2px solid var(--sage);
+}
+
+.month {
+  font-size: 1.1rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.year {
+  font-size: 1.3rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ceremony-title {
+    font-size: 1.8rem;
+  }
+
+  .location {
+    font-size: 1.2rem;
+  }
+
+  .time {
+    font-size: 2.8rem;
+  }
+
+  .date-number {
+    font-size: 2.5rem;
+  }
+
+  .date-section {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-content {
+    gap: 20px;
+  }
+
+  .ceremony-title {
+    font-size: 1.5rem;
+  }
+
+  .location {
+    font-size: 1rem;
+  }
+
+  .time {
+    font-size: 2.2rem;
+  }
+
+  .date-number {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+
+  .day, .month {
+    font-size: 0.95rem;
+  }
+
+  .year {
+    font-size: 1.1rem;
+  }
+
+  .date-section {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}

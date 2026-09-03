@@ -1,0 +1,158 @@
+.ceremony-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-snap-align: start;
+}
+
+.ceremony-content {
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 60px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.ceremony-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+}
+
+.parents-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+
+.parents-column {
+  text-align: center;
+}
+
+.parents-column .title {
+  font-size: 0.95rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.parents-name {
+  font-size: 1.8rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.child-name {
+  font-size: 1.4rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.address {
+  font-size: 0.95rem;
+  color: var(--sage);
+  font-family: 'Georgia', 'Garamond', serif;
+  line-height: 1.6;
+}
+
+.announcement {
+  text-align: center;
+  border-top: 2px solid var(--light-sage);
+  padding-top: 30px;
+}
+
+.announce-text {
+  font-size: 1.2rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  margin-bottom: 10px;
+}
+
+.marriage-text {
+  font-size: 1.6rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ceremony-content {
+    padding: 40px 30px;
+  }
+
+  .ceremony-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .parents-container {
+    gap: 40px;
+  }
+
+  .parents-name {
+    font-size: 1.5rem;
+  }
+
+  .child-name {
+    font-size: 1.2rem;
+  }
+
+  .marriage-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ceremony-content {
+    padding: 30px 20px;
+  }
+
+  .ceremony-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .parents-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .parents-name {
+    font-size: 1.3rem;
+  }
+
+  .child-name {
+    font-size: 1rem;
+  }
+
+  .address {
+    font-size: 0.9rem;
+  }
+
+  .announce-text {
+    font-size: 1rem;
+  }
+
+  .marriage-text {
+    font-size: 1.2rem;
+  }
+}

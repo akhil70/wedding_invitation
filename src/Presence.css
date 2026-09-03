@@ -1,0 +1,52 @@
+.presence-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-snap-align: start;
+}
+
+.presence-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+}
+
+.presence-text {
+  font-size: 1.8rem;
+  color: var(--text-green);
+  font-family: 'Georgia', 'Garamond', serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .presence-text {
+    font-size: 1.5rem;
+  }
+
+  .presence-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .presence-text {
+    font-size: 1.2rem;
+  }
+
+  .presence-content {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,36 @@
+:root {
+  --primary-green: #1a4d2e;
+  --dark-green: #0f3322;
+  --text-green: #2d5a3d;
+  --cream: #f5f5f0;
+  --light-cream: #faf8f5;
+  --sage: #9db899;
+  --light-sage: #c5dbbe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', 'Garamond', serif;
+  background: var(--primary-green);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: var(--text-green);
+}
+
+html, body {
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}

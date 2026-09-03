@@ -1,0 +1,411 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--primary-green);
+}
+
+/* Card styling */
+.invitation-card {
+  background: var(--cream);
+  border-radius: 30px;
+  padding: 30px 50px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.invitation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.invitation-card.open {
+  transform: scale(1.02);
+}
+
+/* Floral decorations */
+
+/* Card content */
+.card-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Heart icon */
+.heart-icon {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.heart-icon svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Names */
+.groom-name,
+.bride-name {
+  font-size: 3.5rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: var(--text-green);
+  margin: 0;
+  line-height: 1;
+}
+
+.groom-name {
+  margin-bottom: 10px;
+}
+
+.bride-name {
+  margin-bottom: 20px;
+}
+
+.ampersand {
+  font-size: 1.8rem;
+  color: var(--sage);
+  margin: 5px 0 10px 0;
+  font-weight: normal;
+}
+
+/* Divider */
+.divider {
+  font-size: 1.2rem;
+  color: var(--sage);
+  margin: 20px 0;
+  letter-spacing: 3px;
+}
+
+/* Date */
+.date {
+  font-size: 1.3rem;
+  color: var(--sage);
+  margin: 25px 0;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* You're Invited */
+.you-are-invited {
+  font-size: 1.8rem;
+  color: var(--sage);
+  margin: 30px 0 20px 0;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* Guest badge */
+.guest-badge {
+  display: inline-block;
+  background: var(--light-sage);
+  background: rgba(165, 182, 158, 0.4);
+  color: var(--text-green);
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* To join us text */
+.to-join-us {
+  font-size: 1.1rem;
+  color: var(--sage);
+  margin: 20px 0 30px 0;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+/* Button */
+.open-button {
+  background: var(--text-green);
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-family: 'Georgia', 'Garamond', serif;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.open-button:hover {
+  background: var(--primary-green);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(45, 90, 61, 0.3);
+}
+
+.open-button:active {
+  transform: scale(0.98);
+}
+
+/* Invitation details */
+.invitation-details {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid var(--light-sage);
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.invitation-details p {
+  font-size: 1rem;
+  color: var(--text-green);
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.invitation-details .rsvp-text {
+  font-weight: 500;
+  color: var(--primary-green);
+  margin-top: 20px;
+}
+
+/* Responsive - Large Tablets & Small Desktops */
+@media (max-width: 1024px) {
+  .invitation-card {
+    padding: 35px 45px;
+  }
+
+  .groom-name,
+  .bride-name {
+    font-size: 3rem;
+  }
+
+
+}
+
+/* Responsive - Tablets */
+@media (max-width: 768px) {
+  .invitation-card {
+    padding: 30px 40px;
+    max-width: 85%;
+  }
+
+  .groom-name,
+  .bride-name {
+    font-size: 2.5rem;
+  }
+
+  .ampersand {
+    font-size: 1.5rem;
+  }
+
+  .date {
+    font-size: 1.1rem;
+  }
+
+  .you-are-invited {
+    font-size: 1.6rem;
+  }
+
+  .to-join-us {
+    font-size: 1rem;
+  }
+
+  .open-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+
+
+}
+
+/* Responsive - Mobile Landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+  .invitation-card {
+    padding: 25px 35px;
+  }
+
+  .groom-name,
+  .bride-name {
+    font-size: 2rem;
+  }
+
+  .you-are-invited {
+    font-size: 1.3rem;
+  }
+
+  .floral-top-left,
+  .floral-bottom-right {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive - Small Tablets & Large Phones */
+@media (max-width: 600px) {
+  .invitation-card {
+    padding: 25px 30px;
+    max-width: 90%;
+  }
+
+  .groom-name,
+  .bride-name {
+    font-size: 2.2rem;
+  }
+
+  .ampersand {
+    font-size: 1.3rem;
+  }
+
+  .heart-icon svg {
+    width: 55px;
+    height: 55px;
+  }
+
+  .divider {
+    font-size: 1rem;
+    margin: 15px 0;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+  .you-are-invited {
+    font-size: 1.4rem;
+  }
+
+  .guest-badge {
+    padding: 8px 20px;
+    font-size: 0.95rem;
+  }
+
+  .to-join-us {
+    font-size: 0.95rem;
+  }
+
+  .open-button {
+    padding: 11px 28px;
+    font-size: 0.95rem;
+  }
+
+
+
+}
+
+/* Responsive - Phones */
+@media (max-width: 480px) {
+  .invitation-card {
+    padding: 20px 25px;
+    border-radius: 25px;
+  }
+
+  .groom-name,
+  .bride-name {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .ampersand {
+    font-size: 1.2rem;
+    margin: 3px 0 8px 0;
+  }
+
+  .heart-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .divider {
+    font-size: 0.9rem;
+    margin: 12px 0;
+  }
+
+  .date {
+    font-size: 0.9rem;
+    margin: 15px 0;
+  }
+
+  .you-are-invited {
+    font-size: 1.2rem;
+    margin: 20px 0 15px 0;
+  }
+
+  .guest-badge {
+    padding: 7px 18px;
+    font-size: 0.9rem;
+  }
+
+  .to-join-us {
+    font-size: 0.9rem;
+    margin: 15px 0 20px 0;
+  }
+
+  .open-button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+
+  .invitation-details p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+
+
+
+}
+
+/* Responsive - Small Phones */
+@media (max-width: 360px) {
+  .invitation-card {
+    padding: 18px 20px;
+    border-radius: 22px;
+  }
+
+  .groom-name,
+  .bride-name {
+    font-size: 1.6rem;
+  }
+
+  .heart-icon svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .date {
+    font-size: 0.85rem;
+  }
+
+  .you-are-invited {
+    font-size: 1.1rem;
+  }
+
+  .guest-badge {
+    padding: 6px 15px;
+    font-size: 0.85rem;
+  }
+
+  .open-button {
+    padding: 9px 20px;
+    font-size: 0.85rem;
+  }
+
+}
