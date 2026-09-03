@@ -7,6 +7,7 @@ export default function App() {
   const [guestName] = useState('Marco')
   const navigate = useNavigate()
 
+  
   return (
     <div className="app" style={{ backgroundImage: `url(${leafBg})` }}>
       <div className="invitation-card">
