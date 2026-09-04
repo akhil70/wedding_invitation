@@ -7,7 +7,7 @@ export default function WeddingDetails({ backgroundImage }) {
 
         <div className="time-section">
           <p className="time-label">TIME</p>
-          <p className="time">16:00</p>
+          <p className="time">11:00</p>
         </div>
 
         <div className="date-section">
