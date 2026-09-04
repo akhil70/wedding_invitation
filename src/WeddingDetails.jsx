@@ -3,7 +3,7 @@ export default function WeddingDetails({ backgroundImage }) {
     <div className="details-section" style={{ backgroundImage }}>
       <div className="details-content">
         <h2 className="ceremony-title">Wedding Ceremony</h2>
-        <p className="location">Borgo Santo Pietro, Vineyard Terrace</p>
+        <p className="location">St Mary's church karakurussi</p>
 
         <div className="time-section">
           <p className="time-label">TIME</p>
