@@ -11,13 +11,8 @@
   scroll-snap-align: start;
 }
 
-.ceremony-content {
-  width: 90%;
-  max-width: 1000px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 60px;
-  border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+.ceremony-section > * {
+  padding: 0 60px;
 }
 
 .ceremony-title {
