@@ -7,7 +7,7 @@ export default function App() {
   const [guestName] = useState('Marco')
   const navigate = useNavigate()
 
-  
+
   return (
     <div className="app" style={{ backgroundImage: `url(${leafBg})` }}>
       <div className="invitation-card">
@@ -33,7 +33,7 @@ export default function App() {
 
           <p className="to-join-us">to join us on our wedding day</p>
 
-          <button className="open-button" onClick={() => navigate('/')}>
+          <button className="open-button" onClick={() => navigate('/invitation')}>
             Open Invitation
           </button>
         </div>
