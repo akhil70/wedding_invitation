@@ -99,7 +99,7 @@ export default function Gallery() {
       >
         <source src={audioFile} type="audio/mpeg" />
       </audio>
-      <button className="close-button" onClick={() => navigate('/invitation')}>
+      <button className="close-button" onClick={() => navigate('/')}>
         ✕
       </button>
 
