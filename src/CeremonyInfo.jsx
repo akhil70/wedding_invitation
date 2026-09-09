@@ -15,7 +15,7 @@ export default function CeremonyInfo({ backgroundImage }) {
           <div className="parents-column">
             <p className="title">Mr. & Mrs.</p>
             <h2 className="parents-name">Joseph P U</h2>
-            <p className="child-name">Annamma P U</p>
+            <p className="child-name">Laisamma</p>
             <p className="address">Pidiyathu (H), Muttappally P O, Kerala</p>
           </div>
         </div>
