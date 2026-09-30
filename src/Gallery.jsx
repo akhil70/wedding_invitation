@@ -50,7 +50,7 @@ export default function Gallery() {
     if (!isAutoScrolling) return
 
     let animationId
-    const scrollSpeed = 0.5
+    const scrollSpeed = 1.5
 
     const scroll = () => {
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight
