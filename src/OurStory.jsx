@@ -1,8 +1,11 @@
 import React from 'react'
 import './OurStory.css'
 
-// All photos in src/assets/Gallery, sorted by filename
-const imageModules = import.meta.glob('./assets/Gallery/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp}', {
+// Photos in src/assets/Gallery, sorted by filename
+const imageModules = import.meta.glob([
+  './assets/Gallery/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp}',
+  '!./assets/Gallery/{akhil,athira}.*', // used in couple frames, not the grid
+], {
   eager: true,
   import: 'default',
 })
