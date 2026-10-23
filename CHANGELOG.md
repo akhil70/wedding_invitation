@@ -1,3 +1,5 @@
+2026-10-23 | n/a | ADD | Our Story lightbox: click photo opens full view with prev/next/close, counter, Esc/arrow keys, swipe, scroll lock | user request
+2026-10-23 | n/a | CHG | Close button restyled: SVG X icon, frosted glass + gold ring, green fill + rotate on hover, aria-label, bigger tap target | user request, more attractive button
 2026-10-23 | n/a | CHG | Akhil frame on /invitation uses Gallery/akhil.jpg (resized 1600px); excluded from Our Story grid | user-supplied photo replaces WA0074
 2026-10-23 | n/a | CHG | Athira frame on /invitation uses Gallery/athira.jpg (resized 1600px, 353 KB); excluded from Our Story grid | user-supplied photo replaces WA0066
 2026-10-22 | n/a | CHG | Gallery photos resized to 1200px JPEG q80 (~1 MB total, was ~150 MB); originals moved to gitignored photos_original/ | slow image load on deployed /invitation

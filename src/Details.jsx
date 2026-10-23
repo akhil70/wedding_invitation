@@ -8,8 +8,8 @@ export default function Details() {
 
   return (
     <div className="details-page" style={{ backgroundImage: `url(${flowerBg})` }}>
-      <button className="close-button" onClick={() => navigate('/invitation')}>
-        ✕
+      <button className="close-button" aria-label="Close" onClick={() => navigate('/invitation')}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
       </button>
 
       <div className="details-container">

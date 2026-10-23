@@ -173,3 +173,8 @@
     font-size: 1.3rem;
   }
 }
+
+.close-button svg {
+  width: 45%;
+  height: 45%;
+}
