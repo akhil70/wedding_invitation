@@ -1,3 +1,4 @@
+2026-10-23 | n/a | ADD | index.html title, description, Open Graph + Twitter tags; public/og-image.jpg (1200x630) share preview | link previews when sharing invite
 2026-10-23 | n/a | ADD | Our Story lightbox: click photo opens full view with prev/next/close, counter, Esc/arrow keys, swipe, scroll lock | user request
 2026-10-23 | n/a | CHG | Close button restyled: SVG X icon, frosted glass + gold ring, green fill + rotate on hover, aria-label, bigger tap target | user request, more attractive button
 2026-10-23 | n/a | CHG | Akhil frame on /invitation uses Gallery/akhil.jpg (resized 1600px); excluded from Our Story grid | user-supplied photo replaces WA0074
