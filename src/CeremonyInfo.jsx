@@ -2,7 +2,6 @@ export default function CeremonyInfo({ backgroundImage }) {
   return (
     <div className="ceremony-section" style={{ backgroundImage }}>
       <div className="ceremony-content">
-        <h1 className="ceremony-title">CEREMONY INFO</h1>
 
         <div className="parents-container">
           <div className="parents-column">
@@ -15,7 +14,7 @@ export default function CeremonyInfo({ backgroundImage }) {
           <div className="parents-column">
             <p className="title">Mr. & Mrs.</p>
             <h2 className="parents-name">Joseph P U</h2>
-            <p className="child-name">Laisamma</p>
+            <p className="child-name">Annamma</p>
             <p className="address">Pidiyathu (H), Muttappally P O, Kerala</p>
           </div>
         </div>
