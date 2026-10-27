@@ -1,3 +1,4 @@
+2026-10-27 | n/a | FIX | Auto-scroll now pauses while touching/wheeling/key-scrolling and resumes 1.5s after release; no longer stops at bottom permanently | scroll never resumed after user touched screen
 2026-10-23 | n/a | FIX | Mother name under Joseph P U: Laisamma -> Annamma | wrong name
 2026-10-23 | n/a | DEL | Removed "CEREMONY INFO" heading from CeremonyInfo section | user request
 2026-10-23 | n/a | CHG | Favicon: heart SVG -> circular couple photo with gold ring (ico, 32px, 192px, apple-touch 180px) | user request

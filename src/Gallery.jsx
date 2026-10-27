@@ -23,7 +23,6 @@ import './Presence.css'
 export default function Gallery() {
   const navigate = useNavigate()
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isAutoScrolling, setIsAutoScrolling] = useState(true)
   const audioRef = useRef(null)
 
   useEffect(() => {
@@ -46,37 +45,56 @@ export default function Gallery() {
     }
   }, [])
 
+  // Auto-scroll: pauses while the user touches/scrolls, resumes shortly after
   useEffect(() => {
-    if (!isAutoScrolling) return
-
-    let animationId
     const scrollSpeed = 1.5
+    const resumeDelay = 1500 // ms after the user lets go
+    let animationId
+    let isTouching = false
+    let resumeAt = 0
 
     const scroll = () => {
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight
-      if (window.scrollY < maxScroll) {
+      const paused = isTouching || performance.now() < resumeAt
+      if (!paused && window.scrollY < maxScroll) {
         window.scrollBy(0, scrollSpeed)
-        animationId = requestAnimationFrame(scroll)
-      } else {
-        setIsAutoScrolling(false)
+      }
+      animationId = requestAnimationFrame(scroll)
+    }
+
+    const pauseThenResume = () => {
+      resumeAt = performance.now() + resumeDelay
+    }
+    const onTouchStart = () => {
+      isTouching = true
+    }
+    const onTouchEnd = () => {
+      isTouching = false
+      pauseThenResume() // gives momentum scrolling time to finish
+    }
+    const onKeyDown = (e) => {
+      if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(e.key)) {
+        pauseThenResume()
       }
     }
 
+    window.addEventListener('touchstart', onTouchStart, { passive: true })
+    window.addEventListener('touchend', onTouchEnd, { passive: true })
+    window.addEventListener('touchcancel', onTouchEnd, { passive: true })
+    window.addEventListener('wheel', pauseThenResume, { passive: true })
+    window.addEventListener('keydown', onKeyDown)
+
     animationId = requestAnimationFrame(scroll)
-
-    const handleUserInteraction = () => {
-      setIsAutoScrolling(false)
-    }
-
-    window.addEventListener('wheel', handleUserInteraction)
-    window.addEventListener('touchmove', handleUserInteraction)
 
     return () => {
       cancelAnimationFrame(animationId)
-      window.removeEventListener('wheel', handleUserInteraction)
-      window.removeEventListener('touchmove', handleUserInteraction)
+      window.removeEventListener('touchstart', onTouchStart)
+      window.removeEventListener('touchend', onTouchEnd)
+      window.removeEventListener('touchcancel', onTouchEnd)
+      window.removeEventListener('wheel', pauseThenResume)
+      window.removeEventListener('keydown', onKeyDown)
     }
-  }, [isAutoScrolling])
+  }, [])
 
   const toggleAudio = () => {
     if (audioRef.current) {
