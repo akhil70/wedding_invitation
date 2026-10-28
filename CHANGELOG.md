@@ -1,3 +1,5 @@
+2026-10-28 | n/a | CHG | Wedding ceremony time 10:30 -> 11:00 AM | user request
+2026-10-28 | n/a | ADD | Wedding Venue section (St Mary's Church, Karakurussi, Plus Code WFJG+QRM) before Reception Venue; shared VenueSection component; maps use query embed + Get Directions link | user request; old reception embed used random fake place IDs
 2026-10-27 | n/a | FIX | Auto-scroll now pauses while touching/wheeling/key-scrolling and resumes 1.5s after release; no longer stops at bottom permanently | scroll never resumed after user touched screen
 2026-10-23 | n/a | FIX | Mother name under Joseph P U: Laisamma -> Annamma | wrong name
 2026-10-23 | n/a | DEL | Removed "CEREMONY INFO" heading from CeremonyInfo section | user request

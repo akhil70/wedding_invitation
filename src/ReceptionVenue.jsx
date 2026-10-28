@@ -1,42 +1,57 @@
-export default function ReceptionVenue({ backgroundImage }) {
-  const venueName = "Royal Palace Auditorium"
-  const address1 = "Kariyode, Ponnamkode"
-  const address2 = "Koottilakkadavu Rd, Karimpuzha-II"
-  const city = "Kerala 678595, India"
-  const lat = 10.8505
-  const lng = 76.2519
-
-  const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(venueName + ' ' + address1 + ' ' + city)}`
+// Venue section with map. Used for both the wedding and reception venues.
+export function VenueSection({ title, venueName, addressLines, mapQuery, backgroundImage }) {
+  const q = encodeURIComponent(mapQuery)
+  const embedUrl = `https://maps.google.com/maps?q=${q}&z=16&output=embed`
+  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${q}`
 
   return (
     <div className="venue-section" style={{ backgroundImage }}>
       <div className="venue-content">
-        <h2 className="venue-title">RECEPTION VENUE</h2>
+        <h2 className="venue-title">{title}</h2>
 
         <div className="venue-info">
           <p className="venue-name">{venueName}</p>
-          <p className="venue-address">{address1}</p>
-          <p className="venue-address">{address2}</p>
-          <p className="venue-city">{city}</p>
+          {addressLines.map((line, i) => (
+            <p key={line} className={i === addressLines.length - 1 ? "venue-city" : "venue-address"}>
+              {line}
+            </p>
+          ))}
         </div>
 
         <div className="map-container">
           <iframe
+            title={`Map of ${venueName}`}
             width="100%"
             height="300"
             frameBorder="0"
             style={{ border: 0, borderRadius: "10px" }}
-            src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.${Math.random().toString().slice(2, 11)}!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5a8d5d5d5d5d5%3A0x${Math.random().toString(16).slice(2, 10)}!2sRoyal%20Palace%20Auditorium!5e0!3m2!1sen!2sin!4v${Date.now()}`}
-            allowFullScreen=""
+            src={embedUrl}
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
 
-        <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="maps-link">
-          View on Google Maps
+        <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="maps-link">
+          Get Directions
         </a>
       </div>
     </div>
+  )
+}
+
+export default function ReceptionVenue({ backgroundImage }) {
+  return (
+    <VenueSection
+      title="RECEPTION VENUE"
+      venueName="Royal Palace Auditorium"
+      addressLines={[
+        "Kariyode, Ponnamkode",
+        "Koottilakkadavu Rd, Karimpuzha-II",
+        "Kerala 678595, India",
+      ]}
+      mapQuery="Royal Palace Auditorium, Kariyode, Ponnamkode, Kerala 678595"
+      backgroundImage={backgroundImage}
+    />
   )
 }

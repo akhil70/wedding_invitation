@@ -9,6 +9,7 @@ import CoupleNames from './CoupleNames'
 import WeddingDetails from './WeddingDetails'
 import Calendar from './Calendar'
 import OurStory from './OurStory'
+import WeddingVenue from './WeddingVenue'
 import ReceptionVenue from './ReceptionVenue'
 import Presence from './Presence'
 import './Gallery.css'
@@ -156,10 +157,13 @@ export default function Gallery() {
       {/* Seventh Component - Our Story */}
       <OurStory backgroundImage={`url(${flowerBg})`} />
 
-      {/* Eighth Component - Reception Venue */}
+      {/* Eighth Component - Wedding Venue */}
+      <WeddingVenue />
+
+      {/* Ninth Component - Reception Venue */}
       <ReceptionVenue />
 
-      {/* Ninth Component - Presence */}
+      {/* Tenth Component - Presence */}
       <Presence backgroundImage={`url(${flowerBg})`} />
 
       <button
